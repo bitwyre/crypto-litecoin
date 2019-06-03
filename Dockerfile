@@ -13,7 +13,7 @@ RUN apt-get update \
         dirmngr \
     && wget https://download.litecoin.org/litecoin-${LITECOIN_VERSION}/linux/litecoin-${LITECOIN_VERSION}-x86_64-linux-gnu.tar.gz \
     && wget https://download.litecoin.org/litecoin-${LITECOIN_VERSION}/linux/litecoin-${LITECOIN_VERSION}-x86_64-linux-gnu.tar.gz.asc \
-    && gpg --keyserver pgp.mit.edu --recv-key FE3348877809386C \
+    && gpg --keyserver hkp://keys.gnupg.net --recv-key 7809386C \
     && gpg --verify litecoin-${LITECOIN_VERSION}-x86_64-linux-gnu.tar.gz.asc \
     && tar xfz /litecoin-${LITECOIN_VERSION}-x86_64-linux-gnu.tar.gz \
     && mv litecoin-${LITECOIN_VERSION}/bin/* /usr/local/bin/ \
@@ -25,7 +25,7 @@ RUN apt-get update \
         gpg-agent \
         dirmngr \
     && apt-get autoremove --purge -y \
-    rm -r /var/lib/apt/lists/*
+    && rm -r /var/lib/apt/lists/*
 
 VOLUME ["/litecoin"]
 
