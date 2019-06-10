@@ -35,4 +35,5 @@ COPY ["setup.sh", "/home/scripts/"]
 COPY ["entrypoint.sh", "/home/scripts/"]
 RUN chmod +x ./home/scripts/setup.sh
 RUN chmod +x ./home/scripts/entrypoint.sh
+
 ENTRYPOINT ["./home/scripts/entrypoint.sh"]
