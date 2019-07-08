@@ -14,6 +14,10 @@ if [ -z ${ENABLE_WALLET:+x} ]; then
     echo "disablewallet=1" >> "/litecoin/litecoin.conf"
 fi
 
+if [ ! -z ${GEN:+x} ]; then
+    echo "gen=${GEN}" >> "/litecoin/litecoin.conf"
+fi
+
 if [ ! -z ${PRUNE:+x} ]; then
     echo "prune=${PRUNE}" >> "/litecoin/litecoin.conf"
 fi
