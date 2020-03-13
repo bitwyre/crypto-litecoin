@@ -1,0 +1,3 @@
+[submodule "litecoin"]
+	path = litecoin
+	url = https://github.com/litecoin-project/litecoin.git
