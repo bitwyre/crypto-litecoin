@@ -23,3 +23,9 @@ The following variables are configureable:
 On run, the configuration file will be printed by the container and the password can be read from the logs.
   - `RPC_USER`: Sets the username for the JSON RPC server.
   - `RPC_PASSWORD`: Sets the password for the JSON RPC server.
+
+Copyright (C) 2019, Bitwyre Technologies LLC.
+
+## Authors
+
+- [Yefta Sutanto](https://github.com/nevrending)

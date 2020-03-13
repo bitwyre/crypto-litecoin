@@ -1,0 +1,16 @@
+after_script:
+  - docker images
+
+before_script:
+  - IMAGE="litecoin:${VERSION/\//-}"
+
+env:
+  - VERSION=0.17.1
+
+language: bash
+
+script:
+  - docker build -t "$IMAGE" .
+  - docker run "$IMAGE" --version | grep "Litecoin"
+
+services: docker
