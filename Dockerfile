@@ -30,7 +30,7 @@ RUN cd /app/src/litecoin/depends/x86_64-pc-linux-gnu && \
 
 # Stage 2 - Production Image
 
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 LABEL maintainer "Yefta Sutanto <yefta@bitwyre.com>"
 
