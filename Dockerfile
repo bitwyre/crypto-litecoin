@@ -1,6 +1,6 @@
 # Stage 1 - Build
 
-FROM gcc:8 as builder
+FROM gcc:10 as builder
 
 COPY litecoin /app/src/litecoin
 WORKDIR /app/src/litecoin/
